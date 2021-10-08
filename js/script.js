@@ -1,16 +1,19 @@
 "use strict"
 
-const countElement = document.querySelector('#count')
-const btn = document.querySelector('#btn')
 
-let count = +0
+let numberOfFilms = prompt('how mach you watch films?', '')
 
+const lastWatchFilm = prompt('last your film ?' , '')
+const starForThisFilm = prompt('star for this film ?' , '')
 
-function incrementCount() {
-    console.log(count)
-    return ++count
+let personalMovieDB = {
+    count: numberOfFilms,
+    movies:{},
+    actors:{},
+    genres:[],
+    privat:false
 }
+personalMovieDB.movies[lastWatchFilm] = starForThisFilm
 
-btn.addEventListener('click',incrementCount)
-countElement.innerHTML = count
-console.log(btn)
+console.log(personalMovieDB)
+
